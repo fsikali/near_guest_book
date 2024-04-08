@@ -98,4 +98,3 @@ near login
 ```
 
 and then use the logged account to sign the transaction: `--accountId <your-account>`.# fsikali_portfolio
-# near_guest_book
