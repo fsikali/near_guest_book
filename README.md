@@ -97,4 +97,5 @@ near call <dev-account> set_greeting '{"greeting":"howdy"}' --accountId <dev-acc
 near login
 ```
 
-and then use the logged account to sign the transaction: `--accountId <your-account>`.
+and then use the logged account to sign the transaction: `--accountId <your-account>`.# fsikali_portfolio
+# near_guest_book
