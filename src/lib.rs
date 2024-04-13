@@ -30,7 +30,25 @@ impl Contract {
         log_str(&format!("Saving greeting: {greeting}"));
         self.greeting = greeting;
     }
-}
+} 
+
+impl Contract {
+    // Public Method - Adds a message to the vector
+    #[payable]
+    pub fn add_message(&mut self, text: String) {
+        // If the user attaches more than 0.01N the message is premium
+        let premium = env::attached_deposit() >= POINT_ONE;
+        let sender = env::predecessor_account_id();
+
+        let message = PostedMessage {
+            premium,
+            sender,
+            text,
+        };
+
+        self.messages.push(message);
+    }
+
 
 /*
  * The rest of this file holds the inline tests for the code above
