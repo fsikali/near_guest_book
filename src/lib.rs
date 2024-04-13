@@ -30,8 +30,10 @@ impl Contract {
         log_str(&format!("Saving greeting: {greeting}"));
         self.greeting = greeting;
     }
-} 
+}  
 
+//Check on this latter
+/*
 impl Contract {
     // Public Method - Adds a message to the vector
     #[payable]
@@ -48,7 +50,7 @@ impl Contract {
 
         self.messages.push(message);
     }
-
+*/
 
 /*
  * The rest of this file holds the inline tests for the code above
