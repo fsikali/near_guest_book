@@ -1,7 +1,17 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
+import './App.css' 
+
+import { useEffect, useState } from 'react'
+import { Wallet } from "./services/near-wallet";
+import Form from './components/Form';
+import SignIn from './components/SignIn';
+import Messages from './components/Messages';
+import { utils } from 'near-api-js'; 
+
+const CONTRACT_NAME = "guestbook.near-examples.testnet"
+const wallet = new Wallet({ createAccessKeyFor: CONTRACT_NAME })
 
 function App() {
   const [count, setCount] = useState(0)
